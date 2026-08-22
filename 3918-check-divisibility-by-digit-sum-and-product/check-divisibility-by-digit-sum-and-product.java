@@ -1,0 +1,17 @@
+class Solution {
+    public boolean checkDivisibility(int n) {
+        int sum = 0;
+        int mul = 1;
+        int ogNumber = n;
+        while(n > 0){
+            int rem = n % 10;
+            sum += rem;
+            mul *= rem;
+            n /= 10;
+        }
+
+        int res = sum + mul;
+       
+        return ogNumber % res == 0;
+    }
+}
