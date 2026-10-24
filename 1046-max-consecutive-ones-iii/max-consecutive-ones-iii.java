@@ -1,12 +1,12 @@
 class Solution {
     public int longestOnes(int[] nums, int k) {
-        int left = 0;
-        int right = 0;
-        int max = 0;
-        int count = 0;
-        while(right < nums.length){
+        
 
-            if(nums[right] == 0){
+        int left = 0;
+        int count = 0;
+        int max =Integer.MIN_VALUE;
+        for(int r = 0; r < nums.length; r++){
+            if(nums[r] == 0){
                 count++;
             }
 
@@ -15,9 +15,7 @@ class Solution {
                     count--;
                 }
             }
-
-            max = Math.max(max, right-left+1);
-            right++;
+            max = Math.max(max, r -left+1);
         }
         return max;
     }
