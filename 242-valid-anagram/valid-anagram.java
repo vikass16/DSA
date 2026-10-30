@@ -9,8 +9,8 @@ class Solution {
             freq[ch-'a']--;
         }
 
-        for(int i=0; i<128; i++){
-            if(freq[i] != 0){
+        for(int i: freq){
+            if(i != 0){
                 return false;
             }
         }
