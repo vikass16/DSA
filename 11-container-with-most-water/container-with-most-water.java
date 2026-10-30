@@ -7,9 +7,9 @@ class Solution {
 
         while(start <= end){
             int min = Math.min(height[start], height[end]);
-            int len = end-start;
-            int area = len * min;
-            max = Math.max(area, max);
+    
+            max = Math.max((end-start)*min, max);
+            
             if(height[start] < height[end]){
                 start++;
             }else{
