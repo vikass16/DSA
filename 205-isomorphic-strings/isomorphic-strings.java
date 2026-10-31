@@ -1,13 +1,13 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        int[] freq1 = new int[128];
-        int[] freq2 = new int[128];
-
         if(s.length() != t.length()){
             return false;
         }
 
-        for(int i=0; i<s.length();i++){
+        int[] freq1 = new int[256];
+        int[] freq2 = new int[256];
+
+        for(int i=0;i<s.length();i++){
             char ch = s.charAt(i);
             char ch1 = t.charAt(i);
 
