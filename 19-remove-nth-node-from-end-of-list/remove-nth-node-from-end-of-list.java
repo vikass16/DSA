@@ -14,10 +14,10 @@ class Solution {
             return null;
         }
 
-        ListNode curr = head; // This will go exactly at the end
-        ListNode temp = head; // this will go where the node to be removed
+        ListNode temp = head;
+        ListNode curr = head;
 
-        int i = 1;
+        int i=1;
         while(i <= n){
             curr = curr.next;
             i++;
@@ -27,11 +27,10 @@ class Solution {
             return head.next;
         }
 
-        while(curr.next != null){
+        while(curr != null && curr.next != null){
             curr = curr.next;
             temp = temp.next;
         }
-
         if(temp != null){
             temp.next = temp.next.next;
         }
