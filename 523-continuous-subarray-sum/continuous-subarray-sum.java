@@ -1,18 +1,17 @@
 class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
         Set<Integer> set = new HashSet<>();
-        int CurrSum = 0;
-        int PreSum = 0;
-        for(int n: nums){
-            CurrSum += n;
-
-            if(set.contains(CurrSum % k)){
+        int sum = 0;
+        int preSum=0;
+        for(int i : nums){
+            sum += i;
+            if(set.contains(sum%k)){
                 return true;
             }
 
-            CurrSum %= k;
-            set.add(PreSum);
-            PreSum = CurrSum;
+            sum = sum%k;
+            set.add(preSum);
+            preSum = sum;
         }
         return false;
     }
