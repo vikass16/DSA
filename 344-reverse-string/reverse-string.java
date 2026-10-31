@@ -1,6 +1,5 @@
 class Solution {
     public void reverseString(char[] s) {
-        String str = "";
         for(int i=0; i<s.length/2; i++){
             char temp = s[i];
             s[i] = s[s.length-i-1];
