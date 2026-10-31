@@ -1,10 +1,10 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        int[] freq = new int[128];
-
         if(ransomNote.length() > magazine.length()){
             return false;
         }
+
+        int[] freq = new int[128];
         for(char ch : magazine.toCharArray()){
             freq[ch-'a']++;
         }
